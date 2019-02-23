@@ -1,0 +1,5 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+import win32com.client
+spk = win32com.client.Dispatch("SAPI.SpVoice")
+spk.Speak(u"这里加上要说的话")
