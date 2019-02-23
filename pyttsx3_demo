@@ -1,0 +1,7 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+import pyttsx3
+
+engine = pyttsx3.init()
+engine.say("10")
+engine.runAndWait()
