@@ -87,7 +87,7 @@ class MY_GUI():
     def callback(self):
         global snS
         if len(snS) == 0:
-            exit()
+            self.init_window_name.destroy()
         elif messagebox.askyesno('警告', '有至少一组SN，是否继续退出'):
             self.init_window_name.destroy()
 
