@@ -22,7 +22,7 @@ class MY_GUI():
         self.init_SN_label.place(x=10, y=10)
         self.init_SN_LimitValue_label = Label(self.init_window_name, text='首次输入SN字符长度为限制值')
         self.init_SN_LimitValue_label.place(x=230, y=10)
-        self.init_Stdout_Hint_label = Label(self.init_window_name, fg='green', text=(len(snS)), font=('黑体', 100))
+        self.init_Stdout_Hint_label = Label(self.init_window_name, fg='blue', text=(len(snS)), font=('黑体', 100))
         self.init_Stdout_Hint_label.place(x=320, y=90)
         self.init_Stderr_Hint_label = Label(self.init_window_name, fg='red', text='', font=('黑体', 50))
         self.init_Stderr_Hint_label.place(x=280, y=230)
