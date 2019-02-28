@@ -26,13 +26,15 @@ class MY_GUI():
         self.init_Stdout_Hint_label.place(x=320, y=90)
         self.init_Stderr_Hint_label = Label(self.init_window_name, fg='red', text='', font=('黑体', 50))
         self.init_Stderr_Hint_label.place(x=280, y=230)
-        self.init_data_Listbox = Listbox(self.init_window_name)
-        self.init_data_Listbox.place(x=5, y=40, width=220, height=240)
-        self.init_data_Listbox_Scrollbar_Y = Scrollbar(self.init_window_name, command=self.init_data_Listbox.yview)
+        self.init_data_Listbox_Scrollbar_Y = Scrollbar(self.init_window_name)
         self.init_data_Listbox_Scrollbar_Y.place(x=225, y=40, height=255)
-        self.init_data_Listbox_Scrollbar_X = Scrollbar(self.init_window_name, orient=HORIZONTAL,
-                                                       command=self.init_data_Listbox.xview)
+        self.init_data_Listbox_Scrollbar_X = Scrollbar(self.init_window_name, orient=HORIZONTAL)
         self.init_data_Listbox_Scrollbar_X.place(x=5, y=280, width=220)
+        self.init_data_Listbox = Listbox(self.init_window_name, yscrollcommand=self.init_data_Listbox_Scrollbar_Y.set,
+                                         xscrollcommand=self.init_data_Listbox_Scrollbar_X.set)
+        self.init_data_Listbox.place(x=5, y=40, width=220, height=240)
+        self.init_data_Listbox_Scrollbar_Y.config(command=self.init_data_Listbox.yview)
+        self.init_data_Listbox_Scrollbar_X.config(command=self.init_data_Listbox.xview)
         self.init_data_Entry = Entry(self.init_window_name)
         self.init_data_Entry.place(x=75, y=10, width=150)
         self.init_data_Entry.focus()  # 当程序运行时,光标默认会出现在该Entry框中
