@@ -99,5 +99,4 @@ def gui_start():
     PORTAL.set_init_window()
     init_window.mainloop()
 
-
 gui_start()
