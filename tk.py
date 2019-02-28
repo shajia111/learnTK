@@ -35,6 +35,7 @@ class MY_GUI():
         self.init_data_Listbox_Scrollbar_X.place(x=5, y=280, width=220)
         self.init_data_Entry = Entry(self.init_window_name)
         self.init_data_Entry.place(x=75, y=10, width=150)
+        self.init_data_Entry.focus()  # 当程序运行时,光标默认会出现在该Entry框中
         self.init_data_Entry.bind('<Return>', self.submit)  # 绑定回车键
         self.init_clip_button = Button(self.init_window_name, text='复制到剪贴板', bg='lightblue',
                                        width=10, command=self.copy_to_clip)
