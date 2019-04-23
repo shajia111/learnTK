@@ -67,16 +67,20 @@ class MY_GUI():
             else:
                 self.init_Stderr_Hint_label.config(text='')
                 self.init_Stdout_Hint_label.config(text=(aav))
-                self.init_data_Listbox.insert(0, inValue)
+                self.init_data_Listbox.insert(END, inValue)
+                self.init_data_Listbox.see(END)
+                self.init_data_Listbox.update()
                 spk.Speak(aav)
         else:
             self.init_Stderr_Hint_label.config(text='错误')
             spk.Speak('错误')
 
     def copy_to_clip(self):
-        global snS
-        inCilp = [str(x) for x in snS]
-        pyperclip.copy('\n'.join(inCilp))
+        cpValue = self.init_data_Listbox.get(0,END)
+        pyperclip.copy('\n'.join(cpValue))
+        #global snS
+        #inCilp = [str(x) for x in snS]
+        #pyperclip.copy('\n'.join(inCilp))
 
     def reste(self):
         global snS, limitValue
